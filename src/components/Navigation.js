@@ -6,7 +6,7 @@ const  Navigation = () =>{
             <div className="container d-flex justify-content-center">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-brand ">
                     <ul className="navbar-nav mr-auto">
-                        <Link to ={'/'}>
+                        <Link to ={'/users'}>
                         <li className="nav-item">
                             <a className="nav-link" href={'/'}>Inicio</a>
                         </li>

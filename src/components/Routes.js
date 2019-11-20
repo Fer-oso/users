@@ -101,7 +101,7 @@ state={
             <BrowserRouter>
             <Navigation/>
             <Switch>
-                <Route exact path='/' render={()=>{return(
+                <Route exact path='/users' render={()=>{return(
                     <TableUsers
                         users={this.state.users}
                         deleteUser = {this.deleteUser}
