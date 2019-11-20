@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 class EditUser extends Component{
    
    state={
+       
        user:{
             name:'',
             username:'',
@@ -9,18 +10,16 @@ class EditUser extends Component{
             email:'',
             password:'',
             id:''
-       }
-   }
+       }}
 
    readData = (e) => {
        this.setState({
            user:{
-               ...this.state.user,
+               ...this.props.user,
               [e.target.name] : e.target.value,
               id:this.props.user.id
            }
-       })
-   }
+       })}
 
    submitData = (e) =>{
        e.preventDefault();
@@ -28,7 +27,6 @@ this.props.editUser(this.state.user)
        
    }
    
-
    chargeForm = () =>{
        if(!this.props.user) return null;
        const {name,username,phone,email,password} = this.props.user;
