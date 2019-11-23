@@ -1,25 +1,19 @@
 import React,{Component} from 'react';
+import { tsImportEqualsDeclaration } from '@babel/types';
 class EditUser extends Component{
-   
-   state={
-       
-       user:{
-            name:'',
-            username:'',
-            phone:'',
-            email:'',
-            password:'',
-            id:''
-       }}
 
+    state={
+        user:{
+           ...this.props.user
+        }
+    }
    readData = (e) => {
-       this.setState({
-           user:{
-               ...this.props.user,
-              [e.target.name] : e.target.value,
-              id:this.props.user.id
-           }
-       })}
+       this.setState({ 
+           user:{ 
+            ...this.state.user,
+            [e.target.name] : e.target.value,
+            id:this.props.user.id                     
+   }})}
 
    submitData = (e) =>{
        e.preventDefault();
