@@ -55,7 +55,7 @@ state={
     }
 
     createUser = (user) => {
-       axios.post(`https://jsonplaceholder.typicode.com/posts`, {user})
+       axios.post(`https://jsonplaceholder.typicode.com/users`, {user})
        .then(res=>{
         Swal.fire(
             'Good job!',
@@ -74,7 +74,7 @@ state={
 
     editUser = (user) =>{
         const {id} = user;
-        axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`,{user})
+        axios.put(`https://jsonplaceholder.typicode.com/users/${id}`,{user})
         .then(res=>{
             Swal.fire(
                 'Good job!',

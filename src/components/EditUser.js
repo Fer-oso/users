@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import { tsImportEqualsDeclaration } from '@babel/types';
 class EditUser extends Component{
 
     state={
